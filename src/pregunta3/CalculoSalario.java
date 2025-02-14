@@ -23,17 +23,17 @@ public class CalculoSalario {
 		double sueldo = 0.0;
 		
 		System.out.println("¿Cuántas horas has trabajado? ");
-		double horas_trab = leer_horastrabajadas();
+		double horas_trabajadas = leer_horastrabajadas();
 		
 		System.out.println("¿Cuál es tu precio por hora? ");
-		double precio_h = leer_tarifa();
+		double tarifa = leer_tarifa();
 		
-		if(horas_trab > 40) {
-			double h_extra = horas_trab - 40;
-			sueldo = (40 * precio_h) + (h_extra * (precio_h * 1.5) );
+		if(horas_trabajadas > 40) {
+			double h_extra = horas_trabajadas - 40;
+			sueldo = (40 * tarifa) + (h_extra * (tarifa * 1.5) );
 		}
 		else {
-			sueldo = (horas_trab * precio_h);
+			sueldo = (horas_trabajadas * tarifa);
 		}
 		
 		System.out.println("Entonces tienes un sueldo de: " + sueldo + "€");
